@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {  
+  height: 100vh;
+  width: 100%;
+  background: url(./assets/guts2.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 500px;
+  width: 50%;
+  backdrop-filter: blur(2px);
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.411);
+  text-align: center;  
+  font-family:'Courier New', Courier, monospace;
+  margin: 100px auto;
+  position: relative;
+  
+}
+
+
