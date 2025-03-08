@@ -22,7 +22,7 @@ function SummarizerApp() {
     setErrorMsg("");
     setSummary("");
 
-    const endpoint = "https://be5c-34-118-242-81.ngrok-free.app/summarize"; // Replace with your actual ngrok URL
+    const endpoint = "https://3275-34-126-156-120.ngrok-free.app/summarize"; // Replace with your actual ngrok URL
 
     try {
       let response;
@@ -66,7 +66,7 @@ function SummarizerApp() {
         <source src="./src/assets/bg.mp4" type="video/mp4" />
       </video>
     <div className="hero" style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
-      <h1>Velox.ai</h1>
+      <img src="src/assets/logo.png" className="title" />
       <form onSubmit={handleSubmit}>
         <div>
           <label>
@@ -130,14 +130,7 @@ function SummarizerApp() {
       {summary && (
         <div className="summary-box" style={{ marginTop: "20px", textAlign: "left", maxWidth: "800px" }}>
           <h2>Final Summary:</h2>
-          <pre
-            style={{
-              whiteSpace: "pre-wrap",
-              background: "yellow",
-              padding: "10px",
-              borderRadius: "5px",
-            }}
-          >
+          <pre>
             {summary}
           </pre>
         </div>
