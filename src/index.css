@@ -23,11 +23,22 @@ body {
   backdrop-filter: blur(12px);
   border-radius: 12px;
   padding: 30px;
-  width: 90%;
-  max-width: 600px;
   text-align: center;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   color: white;
+  width: 70vw;  /* Covers 70% of the screen width */
+  height: 75vh; /* Covers 3/4th of the screen height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*logo*/
+.title {
+  height: 200px;
+  width: 200px;
+  padding-bottom: 35px;
 }
 
 /* Title */
@@ -138,7 +149,6 @@ body {
   font-size: 16px;
   font-weight: bold;
 }
-
 /* Summary Box */
 .summary-box {
   background: rgba(0, 0, 0, 0.5);
@@ -146,21 +156,29 @@ body {
   border-radius: 10px;
   margin-top: 20px;
   text-align: left;
-  max-width: 600px;
+  max-width: 100%; /* Ensures it stays inside .hero */
+  max-height: 250px; /* Prevents summary from overflowing */
+  overflow-y: auto; /* Adds vertical scrolling if needed */
   color: white;
+  word-break: break-word; /* Prevents long text overflow */
 }
 
+/* Summary Box Heading */
 .summary-box h2 {
   font-size: 22px;
   margin-bottom: 10px;
 }
 
+/* Preformatted Text (Final Summary) */
 .summary-box pre {
-  white-space: pre-wrap;
+  white-space: pre-wrap; /* Ensures text wraps */
   background: rgba(255, 255, 255, 0.1);
   padding: 15px;
   border-radius: 8px;
+  max-width: 100%; /* Ensures it doesn't overflow */
+  overflow-x: auto; /* Allows horizontal scrolling if needed */
 }
+
 
 #bg-video {
   position: fixed;
@@ -171,4 +189,8 @@ body {
   object-fit: cover;
   z-index: -1;
   filter: blur(3px);
+}
+
+.input-box {
+  background-color: black;
 }
