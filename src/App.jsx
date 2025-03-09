@@ -162,7 +162,8 @@ function SummarizerApp() {
                   type="radio"
                   name="video"
                   value={video.id.videoId}
-                  onChange={() => setSelectedVideo(video.id.videoId)}
+                  onChange={() => {setSelectedVideo(video.id.videoId);setManualUrl("");}}
+                  
                   style={{ marginRight: "10px" }}
                 />
                 <img
@@ -178,7 +179,7 @@ function SummarizerApp() {
               type="text"
               placeholder="Or paste YouTube video URL..."
               value={manualUrl}
-              onChange={(e) => setManualUrl(e.target.value)}
+              onChange={(e) => {setManualUrl(e.target.value);setSelectedVideo(null);}}
               style={{ width: "400px", padding: "10px", fontSize: "16px" }}
             />
           </div>
