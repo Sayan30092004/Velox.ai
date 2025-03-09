@@ -28,18 +28,21 @@ function SummarizerApp() {
     setErrorMsg("");
     setSummary("");
 
-    const endpoint = "https://3275-34-126-156-120.ngrok-free.app/summarize"; // Replace with your actual ngrok URL
+    const endpoint = "https://e8f8-34-126-156-120.ngrok-free.app/summarize"; // Replace with your actual ngrok URL
 
     try {
       let response;
-      if (inputType === "youtube" || inputType === "text") {
+      if (inputType === "youtube" ||inputType === "text" ) {
         // Send as JSON
+        console.log(selectedVideo)
+        console.log(manualUrl)
+        let videoUrl = selectedVideo ? `https://www.youtube.com/watch?v=${selectedVideo}` : manualUrl;
         response = await fetch(endpoint, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             input_type: inputType,
-            input_source: textInput,
+            input_source: videoUrl,
           }),
         });
       } else if (inputType === "pdf" || inputType === "docx") {
@@ -115,37 +118,7 @@ function SummarizerApp() {
     }
   };
 
-  const handleubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setErrorMsg("");
-    setSummary("");
-
-    try {
-      let videoUrl = selectedVideo ? `https://www.youtube.com/watch?v=${selectedVideo}` : manualUrl;
-
-      let response = await fetch(backendEndpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          input_type: "youtube",
-          input_source: videoUrl,
-        }),
-      });
-
-      const data = await response.json();
-      if (data.final_summary && data.final_summary.trim() !== "") {
-        setSummary(data.final_summary);
-      } else {
-        setErrorMsg("No summary received.");
-      }
-    } catch (err) {
-      console.error("Error fetching summary:", err);
-      setErrorMsg("Error fetching summary. Please try again.");
-    }
-    setLoading(false);
-  };
-
+ 
 
   return (
     <div className="container">
@@ -159,9 +132,10 @@ function SummarizerApp() {
           <label>
             Select Input Type:{" "}
             <select className="dropdown" value={inputType} onChange={handleInputTypeChange}>
-              <option value="youtube">YouTube</option>
-              <option value="pdf">PDF</option>
-              <option value="docx">DOCX</option>
+              
+              <option value="pdf">Textbook as PDF</option>
+              <option value="youtube">YouTube Lectures and Explainers </option>
+              <option value="docx">Textbook as DOCX</option>
               <option value="text">Text</option>
             </select>
           </label>
@@ -215,8 +189,8 @@ function SummarizerApp() {
             <input
             className="input-field"
               type="text"
-              value={textInput}
-              onChange={(e) => setTextInput(e.target.value)}
+              value={manualUrl}
+              onChange={(e) => setManualUrl(e.target.value)}
               placeholder={
                 
                    "Enter raw text"
