@@ -3,6 +3,11 @@
 ## Overview
 Our project is an AI-powered platform designed to simplify and enhance the learning process by generating comprehensive, structured notes from diverse sources like YouTube videos and textbooks. Using advanced machine learning models, our solution efficiently processes large volumes of information to deliver clear, organized summaries, helping learners grasp complex concepts quickly and effectively.
 
+
+[![Watch the demo](![Screenshot 2025-03-09 130348](https://github.com/user-attachments/assets/90b15f3c-6326-4dcd-b646-3c932e406f89))](https://youtu.be/9z8Ess6Hjq8)  
+
+
+
 ## Key Features
 - **Summarized Textbook Content**: Automatically extracts and condenses key information from textbooks and PDFs into well-organized notes.
 - **YouTube Video Summaries**: Processes YouTube video URLs to generate detailed summaries with timestamps, capturing essential points and insights.
@@ -16,11 +21,13 @@ Our project is an AI-powered platform designed to simplify and enhance the learn
 - Upload any required files.
 - Run your Flask backend code.
 - Use **ngrok** to expose your Colab Flask server and get a public URL.
+- Two api tokens would be required one open-router-api key of deepseek-r1-distill-llama-70b:free and ngrok token .
 
 ### 2. Integrate with the Frontend
 - Copy the **ngrok public URL** and update the React app accordingly.
 - The React frontend provides an intuitive interface (e.g., a search bar or file uploader) for users.
 - When a user submits a request, the frontend sends the appropriate payload (**JSON** or **FormData**) to the `/summarize` endpoint.
+- Api token of google cloud for youtube would be required .
 
 ### 3. Backend Processing
 - The backend receives the request, downloads/transcribes/extracts text as needed, and runs the summarization pipeline.
