@@ -1,4 +1,3 @@
-# Velox.ai
 ![velox](https://github.com/user-attachments/assets/8213e182-7ed4-477b-b626-8c4ae0ef4951)
 
 ## Overview
@@ -33,28 +32,36 @@ Our project is an AI-powered platform designed to simplify and enhance the learn
 - The React app parses the JSON response and extracts the `final_summary` key.
 - The structured summary is displayed in an easy-to-read format.
 - Any errors (e.g., missing summary) are logged in the browser console for debugging.
+![sum](https://github.com/user-attachments/assets/566313c5-049a-4115-81e7-b327dd7f02b4)
+
+  
 
 ## How It Works
 1. **User Input**: The user provides input in different formats:
+   - PDF/DOCX file upload
    - YouTube URL
    - Raw text
-   - PDF/DOCX file upload
-2. **Backend Processing**:
+   **Backe![Screenshot 2025-03-09 085440](https://github.com/user-attachments/assets/5295cb18-0b11-4a78-947f-4737f87314ab)
+3. **Processing**:
    - Extracts key information from input sources.
    - Runs AI-powered summarization models.
    - Generates structured summaries and optional Q&A pairs.
-3. **Frontend Display**:
+4. **Frontend Display**:
    - Presents the summary in an intuitive, easy-to-read format.
    - Enables direct search for YouTube videos without needing a URL.
+     ![image](https://github.com/user-attachments/assets/0a2727c0-73bc-495f-ac39-57c864782727)
+     
+
 
 ## Technologies Used
 - **Frontend**: React.js
 - **Backend**: Flask (Python)
-- **Machine Learning**: AI-based text summarization models
+- **Machine Learning**: AI-based text summarization models ,
 - **Cloud & Deployment**: Google Colab, ngrok
 
 ## Future Enhancements
 - Implement a **personalized learning assistant** to suggest summaries based on user preferences.
+- Implement a **chat bot** to build on the initial knowledge .
 - Introduce **multi-language summarization** to expand accessibility.
 - Optimize processing speed for large documents and videos.
 
