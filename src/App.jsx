@@ -21,14 +21,14 @@ function SummarizerApp() {
     setFileInput(null);
     setSummary("");
   };
-  const apiKey = "AIzaSyCK0lNefj4v_wUNFdaVev3UgxrfUt-JDfw"; // Replace with your actual API key
+  const apiKey = "api_Token"; // Replace with your actual API key
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setErrorMsg("");
     setSummary("");
 
-    const endpoint = "https://cfe6-34-19-7-133.ngrok-free.app/summarize"; // Replace with your actual ngrok URL
+    const endpoint = "https://3457-34-19-7-133.ngrok-free.app/summarize"; // Replace with your actual ngrok URL
 
     try {
       let response;
