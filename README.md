@@ -2,7 +2,7 @@
 ## Overview
 Our project is an AI-powered platform designed to simplify and enhance the learning process by generating comprehensive, structured notes from diverse sources like YouTube videos and textbooks. Using advanced machine learning models, our solution efficiently processes large volumes of information to deliver clear, organized summaries, helping learners grasp complex concepts quickly and effectively.
 
-
+##Demo Video
 [![Click here to Watch the demo video](![Screenshot 2025-03-09 130348](https://github.com/user-attachments/assets/90b15f3c-6326-4dcd-b646-3c932e406f89))](https://youtu.be/9z8Ess6Hjq8)  
 
 
