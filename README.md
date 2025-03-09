@@ -56,7 +56,7 @@ Our project is an AI-powered platform designed to simplify and enhance the learn
 ## Technologies Used
 - **Frontend**: React.js
 - **Backend**: Flask (Python)
-- **Machine Learning**: AI-based text summarization models ,
+- **Machine Learning**: Deepseek-Llama 70b for summarization and Whisper API for transcription
 - **Cloud & Deployment**: Google Colab, ngrok
 
 ## Future Enhancements
