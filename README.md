@@ -1,5 +1,4 @@
 ![velox](https://github.com/user-attachments/assets/8213e182-7ed4-477b-b626-8c4ae0ef4951)
-
 ## Overview
 Our project is an AI-powered platform designed to simplify and enhance the learning process by generating comprehensive, structured notes from diverse sources like YouTube videos and textbooks. Using advanced machine learning models, our solution efficiently processes large volumes of information to deliver clear, organized summaries, helping learners grasp complex concepts quickly and effectively.
 
