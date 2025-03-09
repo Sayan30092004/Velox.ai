@@ -28,7 +28,7 @@ function SummarizerApp() {
     setErrorMsg("");
     setSummary("");
 
-    const endpoint = "https://e8f8-34-126-156-120.ngrok-free.app/summarize"; // Replace with your actual ngrok URL
+    const endpoint = "https://cfe6-34-19-7-133.ngrok-free.app/summarize"; // Replace with your actual ngrok URL
 
     try {
       let response;
