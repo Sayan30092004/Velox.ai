@@ -1,0 +1,115 @@
+/* Global Styles */
+body {
+    color: #eee;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    background: linear-gradient(rgba(45, 42, 68, 0.5), rgba(29, 27, 52, 0.5)),
+      url("../assets/background.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  
+  /* Hide Scrollbar */
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+  
+  /* Reset Defaults */
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+  }
+  
+  /* Header Styling */
+  header img {
+    width: 100px;
+  }
+  
+  header {
+    width: min(1200px, 90vw);
+    margin: auto;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header nav ul {
+    display: flex;
+    gap: 30px;
+  }
+  
+  /* Banner Section */
+  main .banner {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    margin-top: -70px;
+  }
+  
+  /* Typography */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 500;
+  }
+  
+  /* Button Styling */
+  .banner button {
+    all: unset;
+    border: 1px solid #afaeae55;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom, #eee1, transparent, #eee1);
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  .banner button:hover {
+    background-color: #c691e6;
+    color: #040018;
+    box-shadow: 0 0 50px #c691e6;
+  }
+  
+  /* Gradient Text Effect */
+  h1 {
+    --to: left;
+    font-size: 5em;
+    font-weight: bold;
+    background-image: linear-gradient(to var(--to), #89a5df, #e46e7f, #e8e191);
+    background-clip: text;  /* Standard property */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    line-height: 1em;
+  }
+  
+  h1.right {
+    --to: right;
+    font-size: 2em;
+  }
+  
+  /* Dots Canvas Styling */
+  .banner {
+    position: relative;
+  }
+  
+  .banner #dotsCanvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
