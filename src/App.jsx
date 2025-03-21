@@ -1,6 +1,13 @@
+<<<<<<< Updated upstream
 import React, { useState } from "react";
 import axios from "axios";
 import Loader from "./components/loader";
+=======
+  import React, { useState } from "react";
+  import axios from "axios";
+  import Loader from "./components/loader";
+  import LandbotChat from './components/LandbotChat';
+>>>>>>> Stashed changes
 
 function SummarizerApp() {
   const [inputType, setInputType] = useState("youtube");
