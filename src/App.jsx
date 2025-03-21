@@ -31,7 +31,7 @@
       setErrorMsg("");
       setSummary("");
 
-      const endpoint = "https://aa5a-34-16-134-243.ngrok-free.app/summarize"; // Replace with your actual ngrok URL
+      const endpoint = "https://781a-34-126-114-62.ngrok-free.app/summarize"; // Replace with your actual ngrok URL
 
       try {
         let response;
@@ -124,7 +124,7 @@
       }
     };
 
-  
+    let vId = selectedVideo;
 
     return (
       <div className="container">
@@ -132,11 +132,13 @@
           <source src="./src/assets/bg.mp4" type="video/mp4" />
         </video>
     
-        <div className="hero" style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
-          <img src="src/assets/logo.png" className="title" />
+        
+          
     
           {/* Input Screen */}
           {screen === "input" && (
+            <div className="hero" style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
+              <img src="src/assets/logo.png" className="title" />
             <form onSubmit={handleSubmit}>
               <div>
                 <label>
@@ -149,6 +151,7 @@
                   </select>
                 </label>
               </div>
+              
               <br />
     
               {inputType === "youtube" ? (
@@ -224,6 +227,7 @@
                 Summarize
               </button>
             </form>
+            </div>
           )}
     
           {/* Loading Screen */}
@@ -235,18 +239,26 @@
     
           {/* Summary Screen */}
           {screen === "result" && (
-            <><div className="summary-box" style={{ marginTop: "20px", textAlign: "left", maxWidth: "800px" }}>
+            <>
+            <iframe
+              src={`https://www.youtube.com/embed/${vId}`}
+              title="YouTube Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+            <div className="summary-box" style={{ marginTop: "20px", textAlign: "left", maxWidth: "800px" }}>
               <h2>Final Summary:</h2>
               <pre>{summary}</pre>
               <button onClick={() => setScreen("input")} style={{ marginTop: "10px", padding: "10px 20px", fontSize: "16px" }}>
                 Summarize Another
               </button>
             </div>
+            
             </>
           )}
     
           {errorMsg && <p style={{ color: "red" }}>{errorMsg}</p>}
-        </div>
+        
       </div>
     );
     

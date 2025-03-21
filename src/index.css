@@ -157,7 +157,7 @@ body {
   margin-top: 20px;
   text-align: left;
   max-width: 100%; /* Ensures it stays inside .hero */
-  max-height: 250px; /* Prevents summary from overflowing */
+  max-height: 600px; /* Prevents summary from overflowing */
   overflow-y: auto; /* Adds vertical scrolling if needed */
   color: white;
   word-break: break-word; /* Prevents long text overflow */
