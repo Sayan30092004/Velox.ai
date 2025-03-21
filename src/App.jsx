@@ -31,7 +31,11 @@ function SummarizerApp() {
     setErrorMsg("");
     setSummary("");
 
+<<<<<<< HEAD
     const endpoint = "https://781a-34-126-114-62.ngrok-free.app/summarize"; // Replace with your actual ngrok URL
+=======
+      const endpoint = "https://781a-34-126-114-62.ngrok-free.app/summarize"; // Replace with your actual ngrok URL
+>>>>>>> 7908b9e8af985070633429614409365625bc5f3b
 
     try {
       let response;
@@ -124,6 +128,7 @@ function SummarizerApp() {
     }
   };
 
+<<<<<<< HEAD
   let vId = selectedVideo;
 
   return (
@@ -195,6 +200,24 @@ function SummarizerApp() {
                 />
               </div>
             ) : inputType === "text" ? (
+=======
+    let vId = selectedVideo;
+
+    return (
+      <div className="container">
+        <video autoPlay muted loop id="bg-video">
+          <source src="./src/assets/bg.mp4" type="video/mp4" />
+        </video>
+    
+        
+          
+    
+          {/* Input Screen */}
+          {screen === "input" && (
+            <div className="hero" style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
+              <img src="src/assets/logo.png" className="title" />
+            <form onSubmit={handleSubmit}>
+>>>>>>> 7908b9e8af985070633429614409365625bc5f3b
               <div>
                 <label>
                   <input
@@ -208,10 +231,18 @@ function SummarizerApp() {
                   />
                 </label>
               </div>
+<<<<<<< HEAD
             ) : (
               <div>
                 <label>
                   Upload {inputType.toUpperCase()} File:{" "}
+=======
+              
+              <br />
+    
+              {inputType === "youtube" ? (
+                <div>
+>>>>>>> 7908b9e8af985070633429614409365625bc5f3b
                   <input
                     type="file"
                     onChange={(e) => setFileInput(e.target.files[0])}
@@ -262,9 +293,53 @@ function SummarizerApp() {
       </button>
     </div>
     
+<<<<<<< HEAD
     </div>
   </>
 )}
+=======
+              <br />
+              <button className="btn" type="submit" style={{ padding: "10px 20px", fontSize: "16px", cursor: "pointer" }}>
+                Summarize
+              </button>
+            </form>
+            </div>
+          )}
+    
+          {/* Loading Screen */}
+          {screen === "loading" && (
+            <div className="loading-screen">
+              <Loader />
+            </div>
+          )}
+    
+          {/* Summary Screen */}
+          {screen === "result" && (
+            <>
+            <iframe
+              src={`https://www.youtube.com/embed/${vId}`}
+              title="YouTube Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+            <div className="summary-box" style={{ marginTop: "20px", textAlign: "left", maxWidth: "800px" }}>
+              <h2>Final Summary:</h2>
+              <pre>{summary}</pre>
+              <button onClick={() => setScreen("input")} style={{ marginTop: "10px", padding: "10px 20px", fontSize: "16px" }}>
+                Summarize Another
+              </button>
+            </div>
+            
+            </>
+          )}
+    
+          {errorMsg && <p style={{ color: "red" }}>{errorMsg}</p>}
+        
+      </div>
+    );
+    
+  }
+>>>>>>> 7908b9e8af985070633429614409365625bc5f3b
 
   
         {errorMsg && <p style={{ color: "red" }}>{errorMsg}</p>}
